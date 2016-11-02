@@ -1,18 +1,10 @@
-var elements = document.getElementsByTagName('*');
+var node;
+var walk = document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
 
-for (var i = 0; i < elements.length; i++) {
-    var element = elements[i];
-
-    for (var j = 0; j < element.childNodes.length; j++) {
-        var node = element.childNodes[j];
-
-        if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/Liviu Dragnea/gi, 'Infractorul condamnat definitiv Liviu Dragnea');
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
-    }
+while(node=walk.nextNode()) {
+    var text = node.nodeValue;
+    if (text.search(/Liviu Dragnea/gi) >= 0)
+    {   
+        node.nodeValue = text.replace(/Liviu Dragnea/gi, 'Infractorul condamnat definitiv Liviu Dragnea');
+    }    
 }
