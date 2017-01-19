@@ -1,4 +1,13 @@
-var regex = /((?!definitiv))(Liviu)?\s?(Nicolae)?\s*Dragnea/gi 
+var substitutions = [
+  {
+    "regex": /((?!definitiv))(Liviu)?\s?(Nicolae)?\s*Dragnea/gi,
+    "to": " infractorul condamnat definitiv Liviu Dragnea"
+  },
+  {
+    "regex": /(lui)\s?(Liviu)?\s?(Nicolae)?\s*Dragnea/gi,
+    "to": " infractorului condamnat definitiv Liviu Dragnea"
+  }];
+
 
 function dragnify(node) {
     var walk = document.createTreeWalker(node,NodeFilter.SHOW_TEXT,null,false);
@@ -6,10 +15,12 @@ function dragnify(node) {
 
     while(node=walk.nextNode()) {
       var text = node.nodeValue;
-      if (text.search(regex) >= 0) {   
-            node.nodeValue = text.replace(regex, ' infractorul condamnat definitiv Liviu Dragnea');
-          }    
-      }
+      substitutions.forEach(function(elem){
+        if (text.search(elem.regex) >= 0) {   
+            node.nodeValue = text.replace(elem.regex, elem.to);
+          }
+      })
+    }
 }
 
 
