@@ -6,6 +6,10 @@ var substitutions = [
   {
     "regex": /(lui)\s?(Liviu)?\s?(Nicolae)?\s*Dragnea/gi,
     "to": " infractorului condamnat definitiv Liviu Dragnea"
+  },
+   {
+    "regex": /((?!definitiv))(Calin)|(Călin)?\s?(Popescu)?\s*(Tariceanu)|(Tăriceanu)/gi,
+    "to": " Călin Popescu Tăriceanu, judecat pentru marturie mincinoasa si favorizarea infractorului,"
   }];
 
 
