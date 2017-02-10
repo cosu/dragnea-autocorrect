@@ -8,10 +8,9 @@ var substitutions = [
     "to": " infractorului condamnat definitiv Liviu Dragnea"
   },
   {
-    "regex": /(C[aă]lin)?\s?(Popescu)?\s?(T[aă]riceanu),?/gi,
-    "to": "Călin Popescu Tăriceanu, judecat pentru mărturie mincinoasă și favorizarea infractorului,"
+    "regex": /(C[aă]lin)?\s?(Popescu)?\s?(T[aă]riceanu)([,.])?/gi,
+    "to": "Călin Popescu Tăriceanu, judecat pentru mărturie mincinoasă și favorizarea infractorului$4"
   }
-
 ];
 
 
