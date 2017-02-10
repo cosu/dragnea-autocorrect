@@ -6,7 +6,13 @@ var substitutions = [
   {
     "regex": /(lui)\s?(Liviu)?\s?(Nicolae)?\s*Dragnea/gi,
     "to": " infractorului condamnat definitiv Liviu Dragnea"
-  }];
+  },
+  {
+    "regex": /(C[aă]lin)?\s?(Popescu)?\s?(T[aă]riceanu),?/gi,
+    "to": "Călin Popescu Tăriceanu, judecat pentru mărturie mincinoasă și favorizarea infractorului,"
+  }
+
+];
 
 
 function dragnify(node) {
