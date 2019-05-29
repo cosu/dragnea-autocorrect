@@ -1,7 +1,6 @@
 # Dragnea Autocorrect
 
-Browser extension that replaces occurrences of 'Liviu Dragnea' with 'Infractorul condamnat definitiv, Liviu Dragnea' and 
-'Călin Popescu Tăriceanu' with 'Călin Popescu Tăriceanu, judecat pentru mărturie mincinoasă și favorizarea infractorului'
+Browser extension that replaces occurrences of 'Liviu Dragnea' with 'Infractorul încarcerat, Liviu Dragnea'.
 
 
 ## Installation
